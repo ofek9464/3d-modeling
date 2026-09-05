@@ -1,0 +1,6 @@
+numpy
+matplotlib
+Pillow
+trimesh==5.1.0
+manifold3d==3.5.2
+opencv-python-headless

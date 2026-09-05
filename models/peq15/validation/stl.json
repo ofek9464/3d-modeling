@@ -1,0 +1,98 @@
+[
+  {
+    "file": "fit_test_1dot_7p2mm.stl",
+    "watertight": true,
+    "winding": true,
+    "components": 1,
+    "edge_incidence_two": true,
+    "positive_volume": true,
+    "extents_mm": [
+      11.199999809265137,
+      4.730000019073486,
+      7.0
+    ],
+    "triangles": 340,
+    "minimum_area": 0.00010874370506286368,
+    "sha256": "262d04653e88454f83f043d618cb403224a9bc4962db0e63cc78df11fd68d55e"
+  },
+  {
+    "file": "fit_test_2dot_7p4mm.stl",
+    "watertight": true,
+    "winding": true,
+    "components": 1,
+    "edge_incidence_two": true,
+    "positive_volume": true,
+    "extents_mm": [
+      11.199999809265137,
+      4.730000019073486,
+      7.0
+    ],
+    "triangles": 596,
+    "minimum_area": 0.00010874370506286368,
+    "sha256": "0a68bd2e92e5f9444d6579f1f25a20adf8ad594db1900e475b5ca4584ed4a098"
+  },
+  {
+    "file": "fit_test_3dot_7p6mm.stl",
+    "watertight": true,
+    "winding": true,
+    "components": 1,
+    "edge_incidence_two": true,
+    "positive_volume": true,
+    "extents_mm": [
+      11.199999809265137,
+      4.730000019073486,
+      7.0
+    ],
+    "triangles": 852,
+    "minimum_area": 1.534738547093184e-05,
+    "sha256": "deb2df5600a7ccfa474ad806bcd82a71f16c03475402234af53ce5f13fce462b"
+  },
+  {
+    "file": "peq15_channel_7p2mm.stl",
+    "watertight": true,
+    "winding": true,
+    "components": 1,
+    "edge_incidence_two": true,
+    "positive_volume": true,
+    "extents_mm": [
+      23.440000534057617,
+      40.03000068664551,
+      13.229999542236328
+    ],
+    "triangles": 24898,
+    "minimum_area": 1.0077255458080139e-06,
+    "sha256": "d94aec6db31faeb46e22cd8be2dc77e99bd877244674b755070bb3aea9bf87f1"
+  },
+  {
+    "file": "peq15_channel_7p4mm.stl",
+    "watertight": true,
+    "winding": true,
+    "components": 1,
+    "edge_incidence_two": true,
+    "positive_volume": true,
+    "extents_mm": [
+      23.440000534057617,
+      40.03000068664551,
+      13.229999542236328
+    ],
+    "triangles": 24898,
+    "minimum_area": 1.0077255458080139e-06,
+    "sha256": "2f453431ee49dd4ed098d19853f97c77448455682dde333f646ec9427365b63b"
+  },
+  {
+    "file": "peq15_channel_7p6mm.stl",
+    "watertight": true,
+    "winding": true,
+    "components": 1,
+    "edge_incidence_two": true,
+    "positive_volume": true,
+    "extents_mm": [
+      23.440000534057617,
+      40.03000068664551,
+      13.229999542236328
+    ],
+    "triangles": 24898,
+    "minimum_area": 1.0077255458080139e-06,
+    "sha256": "a435185e0efd7bee13007b5c696de077d98d43ec929a8f5b6c8a0ab13ab0b7a4"
+  }
+]

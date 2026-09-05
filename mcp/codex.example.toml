@@ -1,0 +1,10 @@
+# Merge only this section into your Codex configuration.
+# Install uv first. Substitute its absolute uvx path if the GUI cannot find it.
+[mcp_servers.blender]
+command = "uvx"
+args = ["--python", "3.11", "blender-mcp==1.9.1"]
+
+[mcp_servers.blender.env]
+BLENDER_HOST = "127.0.0.1"
+BLENDER_PORT = "9876"
+BLENDER_MCP_DISABLE_TELEMETRY = "1"

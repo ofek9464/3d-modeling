@@ -1,0 +1,11 @@
+* text=auto
+*.stl binary
+*.3mf binary
+*.blend binary
+*.png binary
+*.jpg binary
+*.zip binary
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+skills/create-3d-model/** -text

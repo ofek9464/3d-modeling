@@ -1,0 +1,29 @@
+[
+  {
+    "file": "PEQ15_colorable_7p2mm.3mf",
+    "named_parts": 21,
+    "all_parts_watertight": true,
+    "missing_volume_mm3": 2.011135244891146e-08,
+    "extra_volume_mm3": 2.6932577273531494e-08,
+    "overlapping_volume_mm3": 9.094947017729282e-13,
+    "physical_fit_tested": false
+  },
+  {
+    "file": "PEQ15_colorable_7p4mm.3mf",
+    "named_parts": 21,
+    "all_parts_watertight": true,
+    "missing_volume_mm3": 2.0111417972452915e-08,
+    "extra_volume_mm3": 2.693192942133867e-08,
+    "overlapping_volume_mm3": 9.094947017729282e-13,
+    "physical_fit_tested": false
+  },
+  {
+    "file": "PEQ15_colorable_7p6mm.3mf",
+    "named_parts": 21,
+    "all_parts_watertight": true,
+    "missing_volume_mm3": 2.0110939312372593e-08,
+    "extra_volume_mm3": 2.693275203630954e-08,
+    "overlapping_volume_mm3": 9.094947017729282e-13,
+    "physical_fit_tested": false
+  }
+]

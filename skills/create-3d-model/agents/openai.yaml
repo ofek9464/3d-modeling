@@ -1,0 +1,4 @@
+interface:
+  display_name: "3D Model Creator"
+  short_description: "Create portable 3D models from text or images"
+  default_prompt: "Use $create-3d-model to create, validate, and export a portable 3D model from my text or reference images."

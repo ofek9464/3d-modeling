@@ -1,0 +1,339 @@
+{
+  "source": "https://github.com/CheshireJCat/create-3d-model-skill",
+  "snapshot_date": "2026-09-05",
+  "modified": false,
+  "files": [
+    {
+      "path": "skills/create-3d-model/agents/openai.yaml",
+      "sha256": "cb5b9511fda24a6c5e527b31a3db4c9019b223c2e11d42cdf1a09fbceefba580"
+    },
+    {
+      "path": "skills/create-3d-model/LICENSE",
+      "sha256": "acecb0df48d3fc413bd87482acbbbefa26792f0acd1ae96c96b3c6a09b1ce451"
+    },
+    {
+      "path": "skills/create-3d-model/references/blender-5-compat.md",
+      "sha256": "22918288786f78bf18661c4faa5e2d4ee0d337429194fd58cd3139105011e8af"
+    },
+    {
+      "path": "skills/create-3d-model/references/capability-map.md",
+      "sha256": "b849d5a28657b068a3eafeea69885c9f29f63394157b7b925371f62af2cb1c72"
+    },
+    {
+      "path": "skills/create-3d-model/references/codex-integration.md",
+      "sha256": "99180f0c0d3e63626186397cad0ca65347a7da76a818146ed030f184f70a91ad"
+    },
+    {
+      "path": "skills/create-3d-model/references/core/assembly-order.md",
+      "sha256": "33676b36afb2b31207a8be32491a56ba9606fc35c7c843aa96d1428c4ec23777"
+    },
+    {
+      "path": "skills/create-3d-model/references/core/blender-version-compat.md",
+      "sha256": "88d70e06b7ef76ae415436ffec8283d032f87035cacd6a80477a0d3936468f37"
+    },
+    {
+      "path": "skills/create-3d-model/references/core/common-object-dimensions.md",
+      "sha256": "6472c034e13b696b6a4d323b97b7cffed3740b1c1cee6174c9e16badf5e1fdea"
+    },
+    {
+      "path": "skills/create-3d-model/references/modeling-patterns.md",
+      "sha256": "715b8453f99e81063b7e832ddd4263cfc77b1d201740f1d98e028c7729c8ab52"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/animation-quality-gate/scripts/animation_contact_sheet.py",
+      "sha256": "32186d126dc4981569eb1e67c017c65f765d0d8664f7e6ebf794234b9cb50d69"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/animation-quality-gate/SKILL.md",
+      "sha256": "33892b63cf5f1b07a054a9da26f76dab72b1c485319f27a5315e7338b05d0d2c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/atlas-uv-fitting/scripts/atlas_region_detector.py",
+      "sha256": "854d93476402c7f7b8161ebc896d3035a74bb9d88fd045f56145532f4a8c18b2"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/atlas-uv-fitting/scripts/atlas_region_mapper.py",
+      "sha256": "8ac0184492a7e2f854344dab6ecef6e802d7c9e548dbb8b18eb455b5794e14c9"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/atlas-uv-fitting/SKILL.md",
+      "sha256": "15342f8a53731e038812a6259f482b0a7fc42db49edcf942ab0fd6d396335eff"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-animation/references/overview.md",
+      "sha256": "f59107fa74de463de7ff5813e609148d370873546ac76ad428bb0bffdc1c5f60"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-animation/SKILL.md",
+      "sha256": "0ae053746e49c92b609ec236689466e062dacebfbe5ece338220dcbc92726929"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-cameras/references/overview.md",
+      "sha256": "fcec3658a157cfd1236081dc9ce63d849acbd4e6041d9af1bdde5a782a0a27de"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-cameras/SKILL.md",
+      "sha256": "faf056cc3b0bec5384cfddc614e11d868c2d043cb1c67b3cddec257f4358d37b"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-export/references/overview.md",
+      "sha256": "9dec7f2508ecbecdfccf8d5568909d8b4606102f9be1759159f292b85c2fa82c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-export/SKILL.md",
+      "sha256": "bc80341e824b9aa91d072b8bccbab1f3d24beee130e626a5b5071e400363902c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-lighting/references/overview.md",
+      "sha256": "1f496501ab2f703d2009711d32872fdfb3db31ae649337348fe1841b1c7a4cf8"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-lighting/SKILL.md",
+      "sha256": "b2df7cbaf26dc1e07ea32eb4ea88e4828b0dedbd03eeea7b28fb791d7daf905c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-materials/references/overview.md",
+      "sha256": "2c7ba80b7877f51195ddcb261c08c837ab6cc25733bf351d0b610fac8dd39084"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-materials/SKILL.md",
+      "sha256": "beb6cf4c8d0c5e049b4549389a95e499bd2dfea2eec8e70dbffb55110eec006a"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-modeling/references/overview.md",
+      "sha256": "5c31f0219d423a5142bcd7945195967b9d2a86708dd24573ba00a0566d687718"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-modeling/SKILL.md",
+      "sha256": "8daac4e6f139e6ade26bd20a42e8f1ce746ba0c7b1ecaa6ce54050e41ccc2478"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-pro-workflow/references/overview.md",
+      "sha256": "8b3f10f0e01d635ced6fc3c44fd3a5a3bb2e978f405cac3752b48b64f7554ad2"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-pro-workflow/SKILL.md",
+      "sha256": "f0aa54f4d4a3929d4b19b66ca588481e8468d6d289f70e59fdcf9dd0ab00c446"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-rendering/references/overview.md",
+      "sha256": "03c9f91886ed2270935fc675b96583684c1d90b4d80cee43162f5eac69d5f270"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-rendering/SKILL.md",
+      "sha256": "13b86325da1d856f30f99060c7fb3dd25fdd9445967be152cfbe4193c9eadf93"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-skill-harmonizer/references/handoff-contracts.md",
+      "sha256": "e8a40df12c36a54734d6ff2a7ab59f90dc77817b7a01e464f8c3a6837f81bfb3"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-skill-harmonizer/scripts/skill_graph_audit.py",
+      "sha256": "8900f099f217b951374c70da67ab7ea3a1751cdf5ab6c196652af00a7010afae"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-skill-harmonizer/SKILL.md",
+      "sha256": "823181914290d1783915d466cc8a5d07583974fd1335812a7ce2f22f53a0a529"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-uv-texturing/references/overview.md",
+      "sha256": "7ab3bc3e680122a6b2d9eaafdf3436634f676b9994eb0f240eb15e49f2b59ead"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/blender-uv-texturing/SKILL.md",
+      "sha256": "89999a7be0a450b3f6ac35ea616d1ea49b0ee772559e0fa66e6b464376b05040"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/closed-surface-uv-coverage/scripts/surface_texture_coverage_audit.py",
+      "sha256": "4fc0ee03babc23afd8de417e111c1074961ca76072ac92e40c0d4f5a27587d9d"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/closed-surface-uv-coverage/SKILL.md",
+      "sha256": "15894a18a91337cff959c213a0c3f6127c0ab9ff5e9c4ed08d980fb0a14b92dc"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/contour-to-mesh/scripts/mask_to_mesh_recipe.py",
+      "sha256": "2c53a1c705ccb3847c76fc193d220b77ed01a37b3b465bf74ace830226236268"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/contour-to-mesh/scripts/source_locked_skin_recipe.py",
+      "sha256": "037999e99b5eef9f2487090048c641696943e7164405d7fbf4edaa5684f79813"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/contour-to-mesh/SKILL.md",
+      "sha256": "64c2e852132d909e6a4641549c4cff46c33039665a21fa5dec53c851faa08fb0"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/fit-repair-optimizer/scripts/fit_repair_queue.py",
+      "sha256": "dcf52d0720bc26e83ddcfb3b88973ff60d0d898552b32125cf75c2ef370ba283"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/fit-repair-optimizer/SKILL.md",
+      "sha256": "431e7518c4d98abdbcc379db047f7e745567ab76c4aefb7b4fd54cb5c1e32d93"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/landmark-fit-repair/scripts/landmark_fit_report.py",
+      "sha256": "2ccb9ea70333721b9d88b3055b07a03d272261e6fa3b956c9c5c9abb7571f2cc"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/landmark-fit-repair/SKILL.md",
+      "sha256": "016f7dac5c6b1449ca422a558a5af06adb93bb3313b928ac8b1e134dc48828fa"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/mascot-logo-reconstruction/SKILL.md",
+      "sha256": "c3b79b7ee3b4d2eda0116cc675e523383e5f6f68ef68612466048eb0e1eba984"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/multiview-constraint-solver/scripts/view_constraint_report.py",
+      "sha256": "797b8bedd72bc9a0186bf3f7a31da3440fe570452f23d1bf8ac248bcebb2221d"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/multiview-constraint-solver/SKILL.md",
+      "sha256": "7d5ae511b85d9a320a1955d5d22d973c7c57bb6888b8ac454cd2c8e0255ee68e"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/multiview-fit-loop/scripts/multiview_fit_report.py",
+      "sha256": "3768aee0eb7ba3a5556bce1dd000af08e6166d777e78f73357b597af8564e270"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/multiview-fit-loop/SKILL.md",
+      "sha256": "ec3b5c7020dc7663957ff374791c7b2d336188969466c0c699f7bc31b067a7e3"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/orbital-hud-motion/scripts/orbit_layout_manifest.py",
+      "sha256": "c928bc0aa9af303105ea972a04c0227e7c731fb713ce3009e2b717b2302b04fc"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/orbital-hud-motion/SKILL.md",
+      "sha256": "2401caeb9ebb3b1297c84e0c1e7ccaa4806170b2c5dc00ee13a06ca96ce725b9"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/orthographic-registration/scripts/register_views.py",
+      "sha256": "3979967e2cf98e450071a95777796635fbd79cb3f468b049e07c8c2d0c8ee9ee"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/orthographic-registration/SKILL.md",
+      "sha256": "6ca37042813a97ca306f64aba16a7bc82cc024ded9fa9e881713a35b3b8c7fb6"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/quality-refinement-autoloop/scripts/ralph_autoloop_plan.py",
+      "sha256": "99f8f0f5fb4c5e60bd10b757d0402b8b987ac3984f4e675a06a6e9bb7fbcee6b"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/quality-refinement-autoloop/scripts/release_readiness_check.py",
+      "sha256": "e632c1c010eed43abde8e1833ce4f615fe6893e3d0f7514ee340d185d56c8b43"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/quality-refinement-autoloop/scripts/sanitize_skill_contributions.py",
+      "sha256": "7190b0ab2ad507ae88ed6ed244c2320d87b16382cbae72e6923892053a280b9d"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/quality-refinement-autoloop/SKILL.md",
+      "sha256": "d2ce792f3cf98d28db8dd5015ada9ba43ea79eff9342d90b598d43924449b6c6"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-analysis-validator/references/metrics-and-thresholds.md",
+      "sha256": "9b70b74286b3d9fac8bf9e00f28785abd1fc92147ba3e80658b6c5a555be4960"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-analysis-validator/scripts/reference_manifest_compiler.py",
+      "sha256": "7e88cabee3913d4a238fef948cf1fff78a37b819c147d3e31f42243c60135d19"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-analysis-validator/scripts/render_overlay_validator.py",
+      "sha256": "7fe26400c9c791850e2fe647986edf7edac75ee5c6f0c7350119365be1ab5777"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-analysis-validator/SKILL.md",
+      "sha256": "44538aa141c52c0fef18432cc7f7c6f6ca68137f4021ddac0f4ad30428fcad2e"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-look-calibration/scripts/look_fit_report.py",
+      "sha256": "6b1067d089d5580ddffb0409b503c4d453f827ef9d340abb47b486206d90202d"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-look-calibration/SKILL.md",
+      "sha256": "6b324f161db83fa781731e532916dd100055a6be05854c00219aeb2a46492668"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-to-3d/references/overview.md",
+      "sha256": "ffe16563a2250421964f86d30e2fe3ec83c4b6c3f052c2d10d4a47454eb38a92"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-to-3d/scripts/silhouette_validator.py",
+      "sha256": "6027462ce25ac1c07713b66280a029117f32ef1037a02851069a3c0ab622627c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-to-3d/scripts/template_analyzer.py",
+      "sha256": "07ef58d77a3d08fd658b60cb244103b3014d0355f99d61473c7bde02f7bee9f7"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/reference-to-3d/SKILL.md",
+      "sha256": "bfe4dc0ab75cc54b49c8800698013ebc927ad62bd78a060624e941158c55489e"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/source-part-segmentation/scripts/seeded_part_masks.py",
+      "sha256": "92f4ebfd17bb8fb2486a6fff0973fae83ebf16b86fe6ee03ccec3de1bf2b1f5c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/source-part-segmentation/scripts/segment_source_parts.py",
+      "sha256": "4b1332880aeed3eadbc799d345638c463a8a56890914514f251694872e516e3c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/source-part-segmentation/SKILL.md",
+      "sha256": "190f635882edbd260c8798d5c81db0c00fa6470a052c3c6cef8f4215de8a3a97"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/texture-driven-mesh-fitting/scripts/contour_correspondence_report.py",
+      "sha256": "0fe9311b6f1aa135b82b8e571f0598ba6d0dc93abcf6b12ce5e8fded473ed46c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/texture-driven-mesh-fitting/SKILL.md",
+      "sha256": "1ddceb20fd7f9185d62e977ac092e02e71614ced9a144bde557b1e0527e8edb3"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/texture-state-animation/scripts/texture_transition_plan.py",
+      "sha256": "e9811d343f4a1f7cc5ea3d00ea1c64e259afa28fed6a136ee9227548fd1ac1db"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/texture-state-animation/SKILL.md",
+      "sha256": "c0543c0b44fbfe18151ed6481d2b62a0a8865ffc302cd3db24c703f67b5456a8"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/wireframe-to-3d/references/algorithms.md",
+      "sha256": "22210690c06a069d99c5faf9eefd776d0f91050589efe97ea5b167a0a226000b"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/wireframe-to-3d/references/best-practices.md",
+      "sha256": "772a4ddfe70810935d68fd2ebcf82d0b1e560ca0f3f9f45834133252c94f4ddb"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/wireframe-to-3d/references/blender-patterns.md",
+      "sha256": "ab43882530de0e63250540511eb3c536651414f793688e909f1283195323af8c"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/wireframe-to-3d/scripts/wireframe_analyzer.py",
+      "sha256": "10fa1d183824d0617e233d250e4e8108d7c198e95e6cf7809866939cdf457838"
+    },
+    {
+      "path": "skills/create-3d-model/references/modules/wireframe-to-3d/SKILL.md",
+      "sha256": "c6cb7ccf317c35bdf9a1086bee8eb3d2428be1918059029e085715b726861f20"
+    },
+    {
+      "path": "skills/create-3d-model/references/upstream.md",
+      "sha256": "5f3eecf109b624e6535d3ddf23847310e1f6bef64bf1f3643ce08eeb84dd43ca"
+    },
+    {
+      "path": "skills/create-3d-model/references/visual-validation.md",
+      "sha256": "c03d2e1cf9144e8efe4b2c7c59e1e0690bbeeb658236974ae0d9110975136959"
+    },
+    {
+      "path": "skills/create-3d-model/SKILL.md",
+      "sha256": "43a38568e14894039f41c23a51bd7ac85dc316f80605819c4b6ba041c8696e3e"
+    },
+    {
+      "path": "skills/create-3d-model/UPSTREAM_LICENSE",
+      "sha256": "53551803e298669de282d339c7e85ae64e6fbf370d07ca08105d8e0a2d2fbf3d"
+    }
+  ]
+}

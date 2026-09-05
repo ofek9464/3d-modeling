@@ -1,0 +1,57 @@
+{
+  "qr_destination": "www.thedvmauthor.com",
+  "qr_grid": 25,
+  "module_mm": 0.9824242424242424,
+  "pattern_width_mm": 24.64060606060606,
+  "quiet_zone_min_mm": 3.9296969696969697,
+  "edge_clearance_mm": 0.5,
+  "search_resolution_mm": 0.05,
+  "qr_center_xy": [
+    10.200000000000003,
+    -6.050000000000001
+  ],
+  "quiet_zone_inside_book": true,
+  "qr_mesh_projection_decoded": "www.thedvmauthor.com",
+  "physical_scan_tested": false,
+  "meshes": [
+    {
+      "file": "keychain_front_glue_half.stl",
+      "watertight": true,
+      "connected_components": 1,
+      "winding_consistent": true,
+      "triangles": 7208,
+      "dimensions_mm": [
+        62.69998359680176,
+        46.363304138183594,
+        2.299999952316284
+      ],
+      "sha256": "9a3e1dc333f1dd49b4e44434eee4e818b03493998feef24817e111150a968333"
+    },
+    {
+      "file": "keychain_qr_glue_half.stl",
+      "watertight": true,
+      "connected_components": 1,
+      "winding_consistent": true,
+      "triangles": 3610,
+      "dimensions_mm": [
+        62.69998359680176,
+        46.363304138183594,
+        1.600000023841858
+      ],
+      "sha256": "c0adfccbd055d63f15c37122af6b79baa325e2add59ce5f34c6ce9bb38b23201"
+    },
+    {
+      "file": "keychain_complete.stl",
+      "watertight": true,
+      "connected_components": 1,
+      "winding_consistent": true,
+      "triangles": 10138,
+      "dimensions_mm": [
+        62.69998359680176,
+        46.363304138183594,
+        3.9000000953674316
+      ],
+      "sha256": "a26f4eaec2b0bbd62c1e2e7590c51b5567d32becaf2f0595f0bec997f396f0c7"
+    }
+  ]
+}
