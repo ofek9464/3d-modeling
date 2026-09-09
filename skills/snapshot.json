@@ -1,7 +1,7 @@
 {
   "source": "https://github.com/CheshireJCat/create-3d-model-skill",
   "snapshot_date": "2026-09-05",
-  "modified": false,
+  "modified": true,
   "files": [
     {
       "path": "skills/create-3d-model/agents/openai.yaml",
@@ -321,7 +321,7 @@
     },
     {
       "path": "skills/create-3d-model/references/upstream.md",
-      "sha256": "5f3eecf109b624e6535d3ddf23847310e1f6bef64bf1f3643ce08eeb84dd43ca"
+      "sha256": "06cd56fc5f35cd6905eaee6b5164a414e59d2194101bde7e1a4ac7b8c5f631aa"
     },
     {
       "path": "skills/create-3d-model/references/visual-validation.md",
@@ -335,5 +335,7 @@
       "path": "skills/create-3d-model/UPSTREAM_LICENSE",
       "sha256": "53551803e298669de282d339c7e85ae64e6fbf370d07ca08105d8e0a2d2fbf3d"
     }
-  ]
+  ],
+  "verified_local_date": "2026-09-10",
+  "modification_note": "Corrected the relative upstream license link; skill content otherwise matches the installed personal skill."
 }

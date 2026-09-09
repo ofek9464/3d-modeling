@@ -6,7 +6,7 @@
 - Reviewed commit: `11016c9a5847897491dde935c346571bd7548e3d`
 - Release: `1.3.0`
 - Commit date: `2026-05-01`
-- License: MIT; see `../UPSTREAM_LICENSE` from the skill root.
+- License: MIT; see [UPSTREAM_LICENSE](../UPSTREAM_LICENSE), in the skill root.
 
 The upstream release contains 30 chain-loadable Claude Code skills led by `text-to-blender`. This Codex adaptation exposes the output-oriented `create-3d-model` orchestrator and retains the other 29 skills as English reference modules. It also retains all 26 Python helpers and the three orchestrator references for assembly order, Blender version compatibility, and common object dimensions.
 
