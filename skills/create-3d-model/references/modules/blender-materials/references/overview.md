@@ -8,7 +8,7 @@
 
 ## The big picture
 
-Blender's **Principled BSDF** is the only shader you need for 95% of work, and the only one that exports cleanly to glTF. It implements the OpenPBR Surface model — same fundamentals as Disney BRDF and Standard Surface — so values transfer between renderers.
+Blender's Principled BSDF is a useful default for portable surface shading. Render-only shader choices and export support must be checked separately. It implements the OpenPBR Surface model — same fundamentals as Disney BRDF and Standard Surface — so values transfer between renderers.
 
 **Master rule**: Metallic is a switch (0 = dielectric, 1 = metal). There's no "in between" except for partially oxidized metal layers. If your value is between 0.2 and 0.8, you've probably set it wrong.
 

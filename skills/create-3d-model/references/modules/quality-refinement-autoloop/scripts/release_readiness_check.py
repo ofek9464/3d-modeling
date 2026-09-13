@@ -1,42 +1,39 @@
 #!/usr/bin/env python3
-"""Lightweight release-readiness checks for the Codex skill package."""
-import argparse, json, re
+"""Check the reference bundle without requiring a separately installed connector."""
+import argparse
+import importlib.util
+import json
 from pathlib import Path
 
 def main():
-    ap=argparse.ArgumentParser()
-    ap.add_argument('--repo-root', required=True)
-    ap.add_argument('--expected-version', required=True)
-    ap.add_argument('--out')
-    args=ap.parse_args()
-    root=Path(args.repo_root)
-    manifest_path=root/'manifest.json'
-    if not manifest_path.exists():
-        manifest_path=root/'plugin/manifest.json'
-    manifest=json.loads(manifest_path.read_text())
-    content_root=manifest_path.parent
-    checks=[]
-    def check(name, ok, detail=''):
-        checks.append({'name':name,'ok':bool(ok),'detail':detail})
-    check('manifest_version', manifest.get('version')==args.expected_version, manifest.get('version'))
-    missing=[]
-    for s in manifest.get('skills',[]):
-        if not (content_root/s['path']).exists(): missing.append(s['path'])
-    check('manifest_paths_exist', not missing, ', '.join(missing[:10]))
-    if manifest_path.parent == root:
-        for required in ['SKILL.md','LICENSE','agents/openai.yaml','references/upstream.md','references/capability-map.md']:
-            p=root/required
-            check(f'{required}_exists', p.exists(), required)
-        connector=root/'connectors/ahujasid-blender-mcp'
-        check('connector_lock_exists', (connector/'uv.lock').exists(), 'connectors/ahujasid-blender-mcp/uv.lock')
-        check('connector_entry_exists', (connector/'main.py').exists(), 'connectors/ahujasid-blender-mcp/main.py')
-    else:
-        for doc in ['README.md','plugin/README.md','CHANGELOG.md']:
-            p=root/doc
-            check(f'{doc}_mentions_version', p.exists() and args.expected_version in p.read_text(errors='ignore'), doc)
-    report={'schema':'blender_skill_release_readiness.v2','expected_version':args.expected_version,'manifest':str(manifest_path),'checks':checks,'passed':all(c['ok'] for c in checks)}
-    txt=json.dumps(report,indent=2)
-    if args.out: open(args.out,'w').write(txt)
-    print(txt)
-    raise SystemExit(0 if report['passed'] else 2)
-if __name__=='__main__': main()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--repo-root", required=True)
+    ap.add_argument("--expected-version")
+    ap.add_argument("--out")
+    args = ap.parse_args()
+    root = Path(args.repo_root).resolve()
+    if (root / "skills/create-3d-model").is_dir():
+        root = root / "skills/create-3d-model"
+    checker = root / "references/modules/blender-skill-harmonizer/scripts/skill_graph_audit.py"
+    if not checker.is_file():
+        raise SystemExit(f"Bundle auditor not found: {checker}")
+    spec = importlib.util.spec_from_file_location("bundle_auditor", checker)
+    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    audit = module.audit_bundle(root)
+    checks = [{"name": "bundle_structure", "ok": audit["passed"], "detail": audit.get("errors", [])}]
+    if args.expected_version is not None:
+        checks.append({"name": "version", "ok": audit.get("version") == args.expected_version,
+                       "detail": audit.get("version")})
+    for required in ["SKILL.md", "module-index.json", "LICENSE", "UPSTREAM_LICENSE",
+                     "agents/openai.yaml", "references/upstream.md", "references/capability-map.md"]:
+        checks.append({"name": required, "ok": (root / required).is_file()})
+    report = {"schema": "blender_skill_release_readiness.v3", "checks": checks,
+              "passed": all(c["ok"] for c in checks)}
+    text = json.dumps(report, indent=2)
+    if args.out:
+        out = Path(args.out); out.parent.mkdir(parents=True, exist_ok=True); out.write_text(text, encoding="utf-8")
+    print(text)
+    raise SystemExit(0 if report["passed"] else 2)
+
+if __name__ == "__main__":
+    main()

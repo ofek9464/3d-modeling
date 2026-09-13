@@ -1,6 +1,6 @@
 # Scene Assembly Order — The Pro Sequence
 
-The order in which you build a Blender scene determines whether you'll work efficiently or constantly redo work. This is the canonical sequence for nearly all production work.
+The order in which you build a Blender scene determines whether you'll work efficiently or constantly redo work. This is a planning example for a new hero still. Select only stages that affect the requested output; existing-scene repairs, printing and export-only work have different dependencies.
 
 ---
 
@@ -71,7 +71,7 @@ But: when in doubt, follow the order.
 
 ## Decision triggers — when to escalate fidelity
 
-Do not move forward until current stage clears its check:
+For each selected stage, check its affected output before dependent detail work:
 
 | Stage | Move on when… |
 |-------|--------------|
@@ -91,7 +91,7 @@ Do not move forward until current stage clears its check:
 2. **Greyscale** — values working independent of color?
 3. **Flip horizontal** — catches blind-spots and asymmetry.
 4. **Compare to reference** — side-by-side at same size.
-5. **Walk away** — 30 minutes; come back fresh.
+5. **Recheck independently** — compare a fresh render with the reference and the acceptance criteria.
 
 ---
 

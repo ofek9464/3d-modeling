@@ -12,16 +12,18 @@
 
 Visual work is complete only after Codex inspects an actual image of the result.
 
-Use at least these two checkpoints:
+For a new asset, use these checkpoints. For a local edit, inspect the affected output; reuse prior blockout evidence when its dependencies are unchanged.
 
 1. Blockout checkpoint: capture a viewport screenshot before detail work.
 2. Final checkpoint: capture a material-preview/rendered viewport or render a still and inspect it.
 
 Prefer the Blender MCP viewport screenshot for interactive work. For a saved render, verify the file exists and then open it with an image-viewing capability. A successful render command, non-zero file size, or correct object count does not prove visual quality.
 
-If no image can be inspected, label the result `structurally verified, visually unverified` and explain why.
+If no image can be inspected, report visual verification as unavailable. Claim structural verification only for checks actually performed, and label a delivered draft with the remaining limitation.
 
 ## Stage gates
+
+Apply gates for the active stages and requested output. A local material correction does not restart modeling.
 
 | Stage | Do not advance until |
 | --- | --- |

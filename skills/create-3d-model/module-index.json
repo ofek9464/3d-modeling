@@ -1,0 +1,123 @@
+{
+  "schema": "blender_reference_bundle.v1",
+  "version": "1.1.0",
+  "entrypoint": "SKILL.md",
+  "modules": [
+    {
+      "name": "animation-quality-gate",
+      "path": "references/modules/animation-quality-gate/guide.md"
+    },
+    {
+      "name": "atlas-uv-fitting",
+      "path": "references/modules/atlas-uv-fitting/guide.md"
+    },
+    {
+      "name": "blender-animation",
+      "path": "references/modules/blender-animation/guide.md"
+    },
+    {
+      "name": "blender-cameras",
+      "path": "references/modules/blender-cameras/guide.md"
+    },
+    {
+      "name": "blender-export",
+      "path": "references/modules/blender-export/guide.md"
+    },
+    {
+      "name": "blender-lighting",
+      "path": "references/modules/blender-lighting/guide.md"
+    },
+    {
+      "name": "blender-materials",
+      "path": "references/modules/blender-materials/guide.md"
+    },
+    {
+      "name": "blender-modeling",
+      "path": "references/modules/blender-modeling/guide.md"
+    },
+    {
+      "name": "blender-pro-workflow",
+      "path": "references/modules/blender-pro-workflow/guide.md"
+    },
+    {
+      "name": "blender-rendering",
+      "path": "references/modules/blender-rendering/guide.md"
+    },
+    {
+      "name": "blender-skill-harmonizer",
+      "path": "references/modules/blender-skill-harmonizer/guide.md"
+    },
+    {
+      "name": "blender-uv-texturing",
+      "path": "references/modules/blender-uv-texturing/guide.md"
+    },
+    {
+      "name": "closed-surface-uv-coverage",
+      "path": "references/modules/closed-surface-uv-coverage/guide.md"
+    },
+    {
+      "name": "contour-to-mesh",
+      "path": "references/modules/contour-to-mesh/guide.md"
+    },
+    {
+      "name": "fit-repair-optimizer",
+      "path": "references/modules/fit-repair-optimizer/guide.md"
+    },
+    {
+      "name": "landmark-fit-repair",
+      "path": "references/modules/landmark-fit-repair/guide.md"
+    },
+    {
+      "name": "mascot-logo-reconstruction",
+      "path": "references/modules/mascot-logo-reconstruction/guide.md"
+    },
+    {
+      "name": "multiview-constraint-solver",
+      "path": "references/modules/multiview-constraint-solver/guide.md"
+    },
+    {
+      "name": "multiview-fit-loop",
+      "path": "references/modules/multiview-fit-loop/guide.md"
+    },
+    {
+      "name": "orbital-hud-motion",
+      "path": "references/modules/orbital-hud-motion/guide.md"
+    },
+    {
+      "name": "orthographic-registration",
+      "path": "references/modules/orthographic-registration/guide.md"
+    },
+    {
+      "name": "quality-refinement-autoloop",
+      "path": "references/modules/quality-refinement-autoloop/guide.md"
+    },
+    {
+      "name": "reference-analysis-validator",
+      "path": "references/modules/reference-analysis-validator/guide.md"
+    },
+    {
+      "name": "reference-look-calibration",
+      "path": "references/modules/reference-look-calibration/guide.md"
+    },
+    {
+      "name": "reference-to-3d",
+      "path": "references/modules/reference-to-3d/guide.md"
+    },
+    {
+      "name": "source-part-segmentation",
+      "path": "references/modules/source-part-segmentation/guide.md"
+    },
+    {
+      "name": "texture-driven-mesh-fitting",
+      "path": "references/modules/texture-driven-mesh-fitting/guide.md"
+    },
+    {
+      "name": "texture-state-animation",
+      "path": "references/modules/texture-state-animation/guide.md"
+    },
+    {
+      "name": "wireframe-to-3d",
+      "path": "references/modules/wireframe-to-3d/guide.md"
+    }
+  ]
+}

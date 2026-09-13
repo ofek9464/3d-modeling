@@ -1,4 +1,6 @@
-# Blender skill handoff contracts
+# Blender reference handoff contracts
+
+Use only handoffs needed by the selected workflow. Reuse existing reports and consume the shared workflow contract for coordinates, source priority and completion.
 
 ## Reference analysis → registration
 
@@ -12,7 +14,7 @@ Registration must not invent part counts; it consumes the manifest.
 Input: `registration_report.json`, canonical view policy, scale/axis contract.
 Output: geometry recipe parameters and reference planes/cameras.
 
-Contour/mesh generation must honor the coordinate contract: front = X/Z, side = Y/Z, top = X/Y.
+Contour/mesh generation consumes the agreed coordinate contract. In the front-locked example: front = X/Z, side = Y/Z, top = X/Y.
 
 ## Contour/mesh → UV fitting
 
@@ -37,7 +39,7 @@ Repair optimizer owns sequential/parallel scheduling after failures.
 
 ## Repair optimizer → export
 
-Input: all gates passed or documented conflict policy.
-Output: final `.blend`, base `.glb`, optional context/aura `.glb`, build notes.
+Input: applicable verification evidence, target requirements and unresolved limitations.
+Output: the requested formats and concise verification notes; GLB plus Blender source is the default only when no other output is specified.
 
-Export skill refuses final export if validation gates are missing.
+A required gate must pass before claiming final quality. An authorized draft or diagnostic export may be saved with its exact limitations.

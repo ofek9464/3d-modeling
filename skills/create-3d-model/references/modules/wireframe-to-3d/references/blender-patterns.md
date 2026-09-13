@@ -691,9 +691,9 @@ full_workflow('wireframe_analyzed.json', 'output.glb')
 | Curves look pinched | Control points too close together | Increase RDP epsilon in analyzer |
 | Mesh has holes | Curve tessellation resolution too low | Increase `curve.resolution_u` |
 | Export fails with "Unknown format" | Attempting to export non-Mesh object | Convert curves to mesh first |
-| File too large (> 15 MB) | High polygon count, embedded textures | Apply Decimate modifier, use flat PBR colors |
+| File exceeds requested size budget | High polygon count, embedded textures | Apply Decimate modifier, use flat PBR colors |
 | Normals inverted | Face orientation inconsistent | Run `mesh.normals_make_consistent(inside=False)` |
-| Material not visible in GLB | Non-Principled shader used | Use only Principled BSDF, no procedural nodes |
+| Material not visible in GLB | Non-Principled shader used | Use exporter-supported surface inputs, no procedural nodes |
 | Asymmetrical lenses | Contour detection missed details | Adjust Canny thresholds, check wireframe quality |
 
 ---
@@ -709,4 +709,4 @@ full_workflow('wireframe_analyzed.json', 'output.glb')
 
 **Date Created**: 2026-04-27
 **Status**: Ready for skill integration
-**Next**: Create SKILL.md with decision logic and Codex MCP orchestration
+These patterns are maintained as references; ordinary model work does not create or edit skill instructions.

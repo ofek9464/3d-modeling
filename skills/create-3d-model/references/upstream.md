@@ -38,3 +38,7 @@ Copyright (c) 2026 RobLe3
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to inclusion of the upstream copyright and permission notice.
 
 The software is provided without warranty. See the bundled `UPSTREAM_LICENSE` for the full upstream license text.
+
+## 2026-09-12 instruction maintenance
+
+Internal SKILL.md modules became guide.md references; long recipe libraries are loaded separately. The root router, shared source/target contract, artifact repair flow and package checks were updated. The 26 existing helper scripts and license notices are retained. The reference bundle uses module-index.json instead of requiring a plugin manifest or a bundled connector.

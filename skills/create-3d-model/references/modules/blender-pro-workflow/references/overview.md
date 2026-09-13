@@ -24,7 +24,7 @@ Pros iterate at the lowest fidelity that answers the current question. Block out
 
 2. Block-out                 →  Primitives only (cubes, spheres) at correct scale
                                 Goal: validate composition + camera + silhouette
-                                Time: 30 minutes, MAX
+                                Time: illustrative planning budget
 
 3. Camera + composition lock →  Position camera, set focal length
                                 Pose subjects against background
@@ -134,7 +134,7 @@ After every pass, do a **critique pass**:
 2. **Greyscale**: render or filter to grayscale. Are values working independent of color?
 3. **Flip horizontal**: catches asymmetry / awkward composition you've grown blind to.
 4. **Compare to reference**: side-by-side at same size.
-5. **Walk away for 30 minutes**: come back fresh. First impressions matter.
+5. **Recheck independently**: compare a fresh render with the reference and the acceptance criteria.
 
 Pros do this **every couple hours**, not just at the end.
 

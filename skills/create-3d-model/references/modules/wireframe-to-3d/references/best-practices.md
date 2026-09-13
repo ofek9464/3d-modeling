@@ -1,5 +1,7 @@
 # Blender Best Practices for the Wireframe-to-3D Skill
 
+Legacy profile scope: fixed size limits, texture resolutions, animation exclusions and optimization examples below belong to the original lightweight-web consumer. Use them only when that target is selected; otherwise parameterize the recipe from the shared task contract.
+
 **Purpose**: Expert knowledge and established patterns for building robust, performant Blender scripts integrated with Codex.
 
 **Status**: Comprehensive reference compiled from official Blender documentation, Blender Studio standards, and community best practices.
@@ -259,7 +261,7 @@ def configure_curve_for_export(curve_obj):
 
 ### 4.1 Principled BSDF Setup for glTF Export
 
-**Critical**: Only Principled BSDF shader nodes export properly to glTF. No procedural nodes.
+**Critical**: Exporter-supported surface inputs shader nodes export properly to glTF. No procedural nodes.
 
 ```python
 def create_pbr_material(name, base_color, metallic=0.0, roughness=0.5, ior=1.5):
@@ -530,7 +532,7 @@ def apply_decimate(mesh_obj, target_ratio=0.8):
 
 **Target file size**:
 - Ideal: ≤ 8 MB
-- Hard cap: ≤ 15 MB (from TECH-SPEC.md)
+- Legacy project budget: ≤ 15 MB (from its TECH-SPEC.md); apply only when this profile is selected
 
 ### 8.3 Final Validation Before Export
 
@@ -729,7 +731,7 @@ def process_with_progress(items, process_func, label="Processing"):
 - [ ] No procedural shaders in materials
 - [ ] No isolated vertices or degenerate faces
 - [ ] Estimated triangle count < 8000 for glasses
-- [ ] File size < 15 MB after export
+- [ ] File size fits the requested target budget after export
 - [ ] All objects in organized collection
 
 **For Smooth Curves**:
@@ -773,7 +775,7 @@ Use this workflow when a user supplies branding art, a texture atlas, front/side
 
 ### 9.1 Source-of-truth hierarchy
 
-1. **Front texture or front wireframe is canonical for silhouette, part count, and face placement.**
+1. **The agreed canonical source policy owns silhouette, part count, and feature placement; a front view is authoritative only when selected.**
 2. Side/back/top views define only depth, stacking, curvature, and hidden surfaces.
 3. Textures are not decoration after the fact; they are measurement references. If the mesh silhouette does not match the texture crop, reshape the mesh rather than stretching the texture.
 4. Always write a part-count checklist before running Blender code, e.g. `expected_primary_parts=<manifest_count>`, then assert the scene creates exactly that number.

@@ -1,5 +1,7 @@
 # Import / Export — Pro Knowledge Overview
 
+Legacy profile scope: fixed size limits, texture resolutions, animation exclusions and optimization examples below belong to the original lightweight-web consumer. Use them only when that target is selected; otherwise parameterize the recipe from the shared task contract.
+
 **Domain**: 14 — glTF, FBX, OBJ, USD, STL, optimization for target platform
 **Status**: Initial pass complete
 **Last update**: 2026-04-27
@@ -41,8 +43,8 @@ Where is this asset going?
 **Already covered in detail** in `wireframe-to-3d/references/best-practices.md`. Quick reminders:
 
 - **GLB** = single binary file (preferred); **glTF** = JSON + .bin + textures (debug-friendly).
-- **Material support**: only Principled BSDF exports cleanly. Procedural shaders must be baked.
-- **Hard cap**: 15 MB; soft target 8 MB.
+- **Material support**: use exporter-supported nodes and verify target fidelity. Procedural shaders must be baked.
+- Example lightweight web profile: 15 MB maximum, 8 MB preferred; apply only for that target.
 - **No KTX2** unless you load extra Three.js KTX2Loader; no Draco unless you load DRACOLoader.
 
 ```python

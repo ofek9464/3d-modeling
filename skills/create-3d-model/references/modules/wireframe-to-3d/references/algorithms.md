@@ -1,5 +1,7 @@
 # Wireframe-to-3D Conversion Skill — Technical Foundation
 
+Legacy profile scope: fixed size limits, texture resolutions, animation exclusions and optimization examples below belong to the original lightweight-web consumer. Use them only when that target is selected; otherwise parameterize the recipe from the shared task contract.
+
 **Purpose**: Aggregate expert knowledge, academic standards, and proven algorithms for building a domain-specific Codex skill that converts 2D orthographic wireframe images to parametric 3D models in Blender.
 
 **Status**: Research complete. This document serves as the authoritative reference for skill implementation.
@@ -433,7 +435,7 @@ bpy.ops.mesh.unwrap(method='SMART_UV_PROJECT')
 
 ### 6.1 File Format Constraints
 
-**Target**: `.glb` (glTF 2.0 binary) ≤ 15 MB hard cap, ideal ≤ 8 MB.
+**Target**: `.glb` (glTF 2.0 binary) within the requested budget; the legacy web profile uses ≤ 15 MB, ideally ≤ 8 MB.
 
 **Embedded vs. External**:
 - **Embedded** (single `.glb` file): all meshes, textures, materials inside; preferred for distribution
@@ -488,7 +490,7 @@ bpy.ops.object.modifier_apply(modifier=modif.name)
 **Iteration**:
 - Export with ratio=0.9, check visual quality
 - If too blocky, reduce ratio incrementally (0.85, 0.80)
-- Target: ≤ 15 MB, visual quality ≥ reference
+- Target: the requested size budget and reference fidelity; 15 MB is a legacy web example
 
 ---
 
@@ -650,11 +652,11 @@ blender >= 4.0 (Python API bundled)
 
 - **No procedural textures in export**: all shader nodes must be baked or simplified to PBR factors
 - **Curve bevel depth**: not exported to glTF; must convert to mesh first (thickness baked into geometry)
-- **No bone animations in export**: animation data ignored by glTF writer; all motion must be driven in JavaScript
+- **Legacy consumer profile**: this example's JavaScript consumer does not use exported rigs; other targets may use supported exported animation after verification
 
 ### 11.3 File Size Constraints
 
-- **Hard cap**: 15 MB GLB file
+- Legacy project profile: 15 MB GLB file; use only when selected
 - **Soft target**: 8 MB for fast mobile loading
 - **If exceeded**: apply Decimate modifier, reduce material resolution, or split into multiple models
 
@@ -677,4 +679,4 @@ blender >= 4.0 (Python API bundled)
 
 **Date Created**: 2026-04-27
 **Status**: Ready for skill scaffolding and implementation
-**Next Phase**: Build SKILL.md with decision logic and Blender MCP integration
+These algorithms are reference material; ordinary reconstruction does not require a skill-development phase.

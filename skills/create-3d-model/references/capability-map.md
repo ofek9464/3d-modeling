@@ -1,128 +1,35 @@
 # Capability map
 
-## Contents
+Select guides by the requested change, not by every stage a complete project could contain. Internal guides and scripts are resolved from their own directories. Use the shared workflow contract for source and target decisions.
 
-1. Loading rule
-2. Orchestration and production
-3. Core Blender domains
-4. Reference-locked reconstruction
-5. Motion and animation QA
-6. Recommended pipelines
-
-## Loading rule
-
-Read a module with Codex's file-reading capability at:
-
-```text
-references/modules/<module-name>/SKILL.md
-```
-
-Resolve `references/...` and `scripts/...` links inside a module from that module's directory. When a module says to load or chain-load another skill, read that other module's `SKILL.md`; do not expect 29 additional top-level Codex skills to be registered.
-
-## Orchestration and production
-
-| Module | Load it when |
+| Module | Read when |
 | --- | --- |
-| `blender-pro-workflow` | The request spans multiple stages or needs a complete scene, hero shot, critique loop, or production order. |
-| `blender-skill-harmonizer` | Multiple modules must share source-of-truth, handoff, precedence, or repair decisions. |
-| `quality-refinement-autoloop` | A result is repeatedly subpar and evidence must be converted into a repair plan. Do not perform its skill/release mutations without an explicit request. |
-| `mascot-logo-reconstruction` | A brand mascot, logo, flat character, or emblem must be reconstructed through fail-gated source matching. |
-
-The top-level `create-3d-model` orchestrator plus these four modules provide the control plane for the other domains.
-
-## Core Blender domains
-
-| Module | Capability |
-| --- | --- |
-| `blender-modeling` | Primitives, direct mesh work, hard-surface modeling, modifiers, `bmesh`, topology, axes, and structural validation. |
-| `blender-materials` | Principled PBR, metal, glass, plastic, fabric, skin/wax, procedural wood/marble/weave, and Blender 5 socket compatibility. |
-| `blender-lighting` | Subject-aware three-point, studio, cinematic, practical, HDRI, outdoor, color-temperature, and shadow setups. |
-| `blender-cameras` | Focal length, composition, depth of field, tracking, orbit, dolly, push-in, and animated camera work. |
-| `blender-rendering` | Cycles/EEVEE selection, samples, denoise, light paths, color management, stills, image sequences, and video output. |
-| `blender-animation` | Keyframes, easing, F-curves, Blender 5 layered Actions, shape keys, drivers, NLA, and loops. |
-| `blender-export` | glTF/GLB, FBX, OBJ, USD, STL, target axes, texture packaging, decimation, and export validation. |
-| `blender-uv-texturing` | UV unwrap/projection, atlases, alpha decals, baking, lightmaps, and glTF-ready textures. |
-| `wireframe-to-3d` | OpenCV line extraction, Bezier fitting, Blender curve/mesh construction, paired-part checks, and GLB delivery. |
-
-## Reference-locked reconstruction
-
-Load these only when source fidelity matters more than plausible freeform modeling.
-
-| Module | Capability |
-| --- | --- |
-| `reference-to-3d` | Overall source/template/orthographic/texture-driven reconstruction workflow. |
-| `reference-analysis-validator` | Source manifests, masks, connected components, overlays, IoU/SSIM, bboxes, centroids, and fail-before-export gates. |
-| `source-part-segmentation` | Separate touching or overlapping source parts into structural masks. |
-| `contour-to-mesh` | Turn masks/contours into filled mesh surfaces or shallow extrusions. |
-| `orthographic-registration` | Register front/side/back/top views into a shared coordinate contract. |
-| `multiview-constraint-solver` | Detect contradictory orthographic sources and choose a canonical policy before rebuilding. |
-| `atlas-uv-fitting` | Detect atlas regions and map individual parts into their intended UV rectangles or projections. |
-| `closed-surface-uv-coverage` | Gate texture coverage across front cap, back cap, and sidewalls of closed/extruded assets. |
-| `texture-driven-mesh-fitting` | Fit mesh boundaries to a texture or source contour instead of stretching the texture over an approximate mesh. |
-| `landmark-fit-repair` | Measure and repair named feature points beyond coarse bbox or silhouette metrics. |
-| `multiview-fit-loop` | Render, compare, adjust, and repeat across registered views. |
-| `fit-repair-optimizer` | Convert validation failures into dependency-aware repair queues. |
-| `reference-look-calibration` | Match crop, extent, brightness, saturation, hue, glow, materials, lights, and render settings to source imagery. |
-
-## Motion and animation QA
-
-| Module | Capability |
-| --- | --- |
-| `texture-state-animation` | Registered, layered, export-aware transitions between texture/material states without whole-image popping or ugly crossfades. |
-| `orbital-hud-motion` | Source-derived halo, orbit, dot, dash, scanner, parallax, and restrained HUD motion. |
-| `animation-quality-gate` | Contact-sheet validation for flicker, silhouette stability, framing, subject dominance, layer separation, and export truth. |
-
-## Recommended pipelines
-
-### Text or image to a general 3D model or hero render
-
-1. `blender-pro-workflow`
-2. `blender-modeling`
-3. `blender-cameras`
-4. `blender-lighting`
-5. `blender-materials`
-6. `blender-rendering`
-7. `blender-export` when requested
-
-### Edit an existing scene
-
-1. Inspect scene and object state.
-2. Load only the affected core domain modules.
-3. Preserve unrelated data and save a versioned checkpoint before destructive work.
-4. Re-run structural and visual checks for the edited scope.
-
-### Wireframe or technical drawing to 3D
-
-1. `blender-skill-harmonizer`
-2. `reference-analysis-validator`
-3. `wireframe-to-3d`
-4. `orthographic-registration` and `multiview-constraint-solver` when multiple views exist
-5. `blender-modeling`
-6. `multiview-fit-loop`
-7. `blender-materials`, `blender-lighting`, `blender-cameras`, `blender-rendering`
-8. `blender-export`
-
-### Exact mascot, logo, template, or texture pack
-
-1. `blender-skill-harmonizer`
-2. `mascot-logo-reconstruction`
-3. `reference-to-3d`
-4. `reference-analysis-validator`
-5. `source-part-segmentation`
-6. `contour-to-mesh` and `orthographic-registration`
-7. `multiview-constraint-solver` when views conflict
-8. `texture-driven-mesh-fitting`, `blender-uv-texturing`, `atlas-uv-fitting`, `closed-surface-uv-coverage`
-9. `landmark-fit-repair`, `multiview-fit-loop`, `fit-repair-optimizer`
-10. `reference-look-calibration`
-11. `blender-export`
-
-### Animated brand or HUD asset
-
-1. Complete the reference-locked geometry, UV, and look gates.
-2. `blender-animation`
-3. `texture-state-animation` when source texture states change
-4. `orbital-hud-motion` for circular or aura elements
-5. `animation-quality-gate`
-6. `blender-rendering` and `blender-export`
-
-These sequences are defaults, not mandatory module dumps. Skip modules whose gate is irrelevant.
+| [animation-quality-gate](modules/animation-quality-gate/guide.md) | Checking rendered or exported motion, flicker, silhouette and framing. |
+| [atlas-uv-fitting](modules/atlas-uv-fitting/guide.md) | Mapping structural parts to regions in a supplied texture atlas. |
+| [blender-animation](modules/blender-animation/guide.md) | Adding or changing keyframes, drivers, shape keys or reusable actions. |
+| [blender-cameras](modules/blender-cameras/guide.md) | Changing framing, focus, camera movement or tracking. |
+| [blender-export](modules/blender-export/guide.md) | Exporting to a target format or investigating a round-trip failure. |
+| [blender-lighting](modules/blender-lighting/guide.md) | Changing lights, environment illumination or a lighting mismatch. |
+| [blender-materials](modules/blender-materials/guide.md) | Creating or changing surface and volume materials. |
+| [blender-modeling](modules/blender-modeling/guide.md) | Creating or changing geometry and topology. |
+| [blender-pro-workflow](modules/blender-pro-workflow/guide.md) | Planning a new scene or an asset spanning several production stages. |
+| [blender-rendering](modules/blender-rendering/guide.md) | Rendering previews, final images or animation frames. |
+| [blender-skill-harmonizer](modules/blender-skill-harmonizer/guide.md) | Resolving coupled module dependencies or conflicting contracts. |
+| [blender-uv-texturing](modules/blender-uv-texturing/guide.md) | Unwrapping, projecting, baking or diagnosing UV distortion. |
+| [closed-surface-uv-coverage](modules/closed-surface-uv-coverage/guide.md) | Checking front, back and side coverage on closed or extruded assets. |
+| [contour-to-mesh](modules/contour-to-mesh/guide.md) | Building a mesh from an exact structural silhouette or mask. |
+| [fit-repair-optimizer](modules/fit-repair-optimizer/guide.md) | Ordering dependent corrections from validation failures. |
+| [landmark-fit-repair](modules/landmark-fit-repair/guide.md) | Repairing named feature drift that silhouette metrics miss. |
+| [mascot-logo-reconstruction](modules/mascot-logo-reconstruction/guide.md) | Coordinating exact reconstruction of a designed logo or mascot. |
+| [multiview-constraint-solver](modules/multiview-constraint-solver/guide.md) | Resolving contradictory dimensions across reference views. |
+| [multiview-fit-loop](modules/multiview-fit-loop/guide.md) | Comparing and repairing a model against several required views. |
+| [orbital-hud-motion](modules/orbital-hud-motion/guide.md) | Building requested source-derived halo, orbit or HUD motion. |
+| [orthographic-registration](modules/orthographic-registration/guide.md) | Aligning reference views to a shared scale and coordinate frame. |
+| [quality-refinement-autoloop](modules/quality-refinement-autoloop/guide.md) | Diagnosing and correcting a rejected or failing artifact. |
+| [reference-analysis-validator](modules/reference-analysis-validator/guide.md) | Measuring source parts and checking exact-match thresholds. |
+| [reference-look-calibration](modules/reference-look-calibration/guide.md) | Matching reference color, brightness and glow after shape is correct. |
+| [reference-to-3d](modules/reference-to-3d/guide.md) | Choosing a reconstruction method from supplied reference material. |
+| [source-part-segmentation](modules/source-part-segmentation/guide.md) | Separating touching or overlapping structural source parts. |
+| [texture-driven-mesh-fitting](modules/texture-driven-mesh-fitting/guide.md) | Correcting geometry that does not fit its source texture contour. |
+| [texture-state-animation](modules/texture-state-animation/guide.md) | Animating registered image or material states for a target runtime. |
+| [wireframe-to-3d](modules/wireframe-to-3d/guide.md) | Extracting structural curves from line drawings before model completion. |
