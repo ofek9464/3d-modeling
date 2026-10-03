@@ -29,3 +29,9 @@ Read each model's print notes. For the PEQ, print a [rail-fit sample](models/peq
 - [Source and licensing notes](THIRD_PARTY_NOTICES.md): provenance for the skill, software, and model references.
 
 The generated meshes were checked for closed geometry. These checks do not establish physical fit, strength, or successful printing. See the per-model validation files for what was measured.
+
+## Patch notes
+
+### 2026-10-03
+
+Added design discovery and generated concept previews before new-model geometry, while preserving scoped repair, reconstruction, and export workflows. Added the two-color printable-model skill and checks for the design-preview workflow.

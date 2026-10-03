@@ -4,6 +4,8 @@
 
 Source: [CheshireJCat/create-3d-model-skill](https://github.com/CheshireJCat/create-3d-model-skill), adapted from [RobLe3/cc-blender-skill](https://github.com/RobLe3/cc-blender-skill).
 
+[`create-2color-3d-models`](create-2color-3d-models/SKILL.md) is a separate skill for printable two-color geometry, aligned color bodies, and dimension checks. Copy its complete directory to install it; it is not one of the Blender bundle's internal modules.
+
 The modules used for these projects include reference analysis, contour modeling, mesh modeling, workflow coordination, rendering, and export. The PEQ color partitioning and manifold checks also use repository Python scripts; the skill alone does not validate printer settings or rail fit.
 
 ## Install for Codex

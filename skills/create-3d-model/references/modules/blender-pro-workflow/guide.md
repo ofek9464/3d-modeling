@@ -1,5 +1,7 @@
 # Blender production planning
 
+For a new design or substantial visual redesign, complete [design discovery and concept preview](../../design-preview.md) before geometry work. Reuse an already selected direction; this design decision is distinct from internal quality checks.
+
 For a new scene or multi-stage asset, identify the requested result and reuse work already complete. Choose only stages whose outputs are needed: source analysis, blockout, geometry, camera, material, light, animation, render or export. An existing material or export edit does not require rebuilding a scene.
 
 Order stages by dependencies. Establish important dimensions and silhouette before detail; evaluate materials under the intended lighting. Exact reconstruction follows the shared source policy and its applicable validation gates. Use the harmonizer only when coupled routes need coordination.

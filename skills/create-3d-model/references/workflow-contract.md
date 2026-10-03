@@ -16,6 +16,8 @@ Classify images and inspect their content. Record source roles, expected structu
 
 User instructions and an agreed canonical policy determine reference precedence. A front view may be canonical for a logo when that matches the requested brand read; do not silently apply that choice to engineering drawings or contradictory views. Reuse an existing choice. Resolve material conflicts using measured evidence; continue independent analysis while a decision is pending.
 
+A selected generated concept establishes visual intent, not measured geometry. The [design-preview workflow](design-preview.md) owns concept selection; preserve explicit dimensions, exact artwork, functional requirements, and measured references over invented image details.
+
 Exact reconstruction consumes measured contours, scale, and landmarks. A plausible inferred back surface or a shallow visual skin is not evidence of a solved multi-view volume. Label unsupported depth and hidden-surface assumptions.
 
 ## Targets and example settings

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create 2-Color 3D Models"
+  short_description: "Image-to-model workflow for dual-color prints"
+  default_prompt: "Use $create-2color-3d-models to turn this image into a printable two-color bookmark model."

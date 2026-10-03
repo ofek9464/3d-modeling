@@ -7,6 +7,8 @@ description: Create, edit, validate, and export Blender 3D assets from text, ref
 
 Deliver the requested 3D asset or scene edit using Blender. Reuse settled dimensions, source priorities, output targets, and quality requirements. Infer reversible defaults; ask only when a missing choice changes the result.
 
+For a new design or a substantial visual redesign, follow [design discovery and concept preview](references/design-preview.md): resolve missing requirements, show a generated concept image, and let the user select the direction before creating or changing geometry. Reuse an already selected concept; exact reconstruction, local repairs, and export-only work follow the exceptions in that reference.
+
 Before the first Blender call, read [integration guidance](references/codex-integration.md) for tool discovery, scene ownership, and safe execution. Read the [workflow contract](references/workflow-contract.md) when establishing source priority, coordinates, output requirements, or verification. Reuse both once established.
 
 Choose the smallest relevant route:
